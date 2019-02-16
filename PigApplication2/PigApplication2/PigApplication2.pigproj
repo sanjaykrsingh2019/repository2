@@ -1,0 +1,25 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>e0dd6f6c-84f4-49dd-87d1-de9b787ed829</ProjectGuid>
+    <OutputType>File</OutputType>
+    <AssemblyName>Pig</AssemblyName>
+    <StartFile>Script.pig</StartFile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <Name>PigApplication2</Name>
+    <RootNamespace>PigApplication2</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Script Include="Script.pig" />
+  </ItemGroup>
+  <Import Project="$(AppData)\Microsoft\DataLake\MsBuild\1.0\Pig.targets" />
+</Project>

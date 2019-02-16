@@ -1,0 +1,1 @@
+﻿Select count(*),clientid from hivesampletable GROUP BY clientid HAVING count(*) > 100;
